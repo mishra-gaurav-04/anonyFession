@@ -1,0 +1,13 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/TiltNeon-Regular-VariableFont_XROT,YROT.ttf",
+      "sha1": "028d1589164d2f10a432da90723694a696157040"
+    },
+    {
+      "path": "assets/fonts/TiltNeon-Regular.ttf",
+      "sha1": "cc1463b48374c4a6c85bb8bc713b2e5b76b70b29"
+    }
+  ]
+}

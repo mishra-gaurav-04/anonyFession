@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Tilt Neon','Courier New', Courier, monospace;
+}
+body{
+    height: 100%;
+    width: 100%; 
+    background: url(https://wallpapercave.com/wp/wp11258920.jpg) no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+div{
+
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        height: 100vh;
+
+        h1{
+            background: linear-gradient(gold,lightgray,orange);
+            -webkit-background-clip: text;
+            color: transparent;
+            font-weight: 400;
+            font-size: 4rem;
+            // text-shadow: 0px 0px 10px red;
+            border-bottom: 2px solid orangered;
+        }
+
+        textarea{
+            width: 47vw;
+            height: 33vh;
+            background: rgba(15, 48, 156, 0.525);
+            border-radius: 50px;
+            border: 2px solid skyblue;
+            box-shadow: 0px 0px 10px blue;
+            margin-top: 9vh;
+            margin-bottom: 7vh;
+            text-align: center;
+            font-size: 1.8rem;
+            color: gold;
+            caret-color: gold;
+            padding: 2rem;
+            overflow-y: scroll;
+            &:focus{
+                outline: none;
+            }
+            &::placeholder{
+                color: rgba(255, 217, 0, 0.545);
+            }
+            &::-webkit-scrollbar{
+              display: none;
+            }
+        }
+
+    }
+
+    
+}
+
+
+.box {
+    --clr-shadow__border: #2228e1;
+    --clr-text: #F6F4EB;
+    --clr-space: #120e1e;
+    --clr-space-gr: #271950;
+    --clr-star: #E9F8F9;
+    --size: 3rem;
+    position: relative;
+    outline: 1px solid var(--clr-shadow__border);
+    background: rgba(0, 0, 0, 0.21);
+    box-shadow: 0px 0px 10px whitesmoke;
+  }
+  
+  .button {
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    background: transparent;
+    padding: calc(var(--size) / 3) var(--size);
+    border: none;
+    cursor: pointer;
+    color: var(--clr-text);
+    text-shadow: 2px 0px var(--clr-shadow__border), 0px 2px var(--clr-shadow__border),
+    -2px 0px var(--clr-shadow__border), 0px -2px var(--clr-shadow__border);
+  }
+  
+  .space {
+    width: 100%;
+    height: 100%;
+    bottom: 0%;
+    gap: 1.5rem;
+    transition: 0.5s ease-in-out;
+    z-index: -1;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    background: linear-gradient( 160deg, var(--clr-space), var(--clr-space-gr));
+  }
+  
+  .box:hover .space {
+    opacity: 1;
+  }
+  
+  .star {
+    height: 4rem;
+    width: 0.3rem;
+    transition: 0.5s;
+    border-radius: 50px;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    position: relative;
+    background-color: var(--clr-star);
+    animation: space-animation calc(0.1s * var(--i)) linear infinite;
+  }
+  
+  @keyframes space-animation {
+    0% {
+      transform: rotate(-30deg) translateY(calc(-52% * var(--i)));
+    }
+  
+    100% {
+      transform: rotate(-30deg) translateY(calc(52% * var(--i)));
+    }
+  }
+  
+  
+  .toast{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    background: rgb(0, 0, 0);
+    border-radius: 10px;
+    border: 2px solid grey;
+    padding: 5px 20px;
+    width: fit-content;
+    text-align: center;
+    p{
+        font-size: 1.2rem;
+        color: wheat;
+        text-align: center;
+        width: 100%;
+        text-wrap: nowrap;
+    }
+  }
+  
+
+  @media screen and (max-width: 890px) {
+    .toast{
+      width: 80vw
+    }
+    div {
+      form{
+        h1{
+          font-size: 3rem;
+        }
+
+        textarea{
+          margin-top: 2rem;
+          margin-bottom: 4rem;
+          width: 70vw;
+          height: 40vh;
+          overflow-y: scroll;
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+  
+  
+  
+  
